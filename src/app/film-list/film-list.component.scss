@@ -1,0 +1,22 @@
+.movie-card{
+    padding: 5px 10px;
+    margin: 20px;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 10px #ffe6cc;
+    border-radius: 10px;
+    // &:hover{
+    //     height: auto;
+    //     width: 320px;
+    //     //height: 270px;
+    //     transition: 0s;
+    // }
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}

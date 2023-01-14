@@ -1,0 +1,38 @@
+<div class="container">
+
+    <div class="refresh">
+        <input type="text" name="search" id="search" (keyup)="search($event.target)">
+        <button>search</button>
+        <button (click)="refresh()">Refresh</button>
+    </div>
+  <div class="card-container">
+    <span *ngFor="let movie of movies">
+      <a (click)="openMovie(movie)">
+        <span class="movie-card">
+          <img
+            src="https://ui-avatars.com/api/?rounded=true&name={{
+              movie.title
+            }}"
+            alt=""
+          />
+          <p>{{ movie.title }}</p>
+          <p>{{ movie?.genres }}</p>
+          <p>{{ movie.description }}</p>
+        </span>
+      </a>
+    </span>
+  </div>
+  <ul>
+    <li style="display: none;" *ngFor="let page of pageno | paginate: { itemsPerPage: 10, currentPage: currpage }"></li>
+  </ul>
+
+  <pagination-controls
+    (pageChange)="pageChanged($event)"
+    [(ngModel)]="currpage"
+    (pageBoundsCorrection)="pageChanged($event)"
+    [maxSize]="9"
+    [directionLinks]="true"
+    [autoHide]="true"
+    [responsive]="true"
+  ></pagination-controls>
+</div>

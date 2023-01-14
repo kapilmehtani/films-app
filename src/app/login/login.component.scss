@@ -1,0 +1,32 @@
+.heading{
+    text-align: center;
+    background: #ff9933;
+    color: white;
+}
+.form-group{
+    input{
+        margin: 15px 30px;
+        border-radius: 15px;
+        border: 2px black solid;
+        padding: 3px;
+    }
+    label{
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+.login-box{
+    text-align: center;
+    border: 1px black solid;
+    margin: 10% 34%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0px 6px #ffe6cc;
+}
+.btn{
+    background:#009933 ;
+    padding: 6px;
+    margin: 5px;
+    border-radius: 15px;
+}

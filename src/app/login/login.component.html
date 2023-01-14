@@ -1,0 +1,20 @@
+<div class="container">
+  
+  <div class="login-box">
+    <form>
+      <div class="form-group">
+        <label class="i-text" for="name">Name :</label>
+        <input class="i-box" type="text" [(ngModel)]="user.username"  class="form-control" id="name" required [ngModelOptions]="{standalone: true}" />
+      </div>
+      <!-- <div class="form-group">
+        <label class="i-text" for="name">Email :</label>
+        <input class="i-box" type="email" [(ngModel)]="user.email"  class="form-control" id="email" required [ngModelOptions]="{standalone: true}" />
+      </div> -->
+      <div class="form-group">
+        <label class="i-text" for="password">Password :</label>
+        <input class="i-box" type="password" [(ngModel)]="user.password"  class="form-control" id="password" required [ngModelOptions]="{standalone: true}" />
+      </div>
+      <button class="btn" type="button" class="btn btn-success" (click)="submit()">LOGIN</button>
+    </form>
+  </div>
+</div>

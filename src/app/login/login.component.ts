@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
     password:null,
   }
   ldata:any;
+  token:any;
+  error:any=false;
   next_url:any;
 
   constructor(public http:HttpClient, private route:Router) { }
@@ -39,9 +41,13 @@ export class LoginComponent implements OnInit {
       console.log(this.ldata);
       if(this.ldata.is_success==true)
     {
+      this.error = false;
+      this.token = this.ldata.data.token;
+      console.log(this.token);
       this.next_url="\flist";
       this.route.navigateByUrl(this.route.url+"/flist");
     }
+    this.error = true;
     });
     if(this.ldata.is_success==true)
     {

@@ -15,6 +15,7 @@
         <input class="i-box" type="password" [(ngModel)]="user.password"  class="form-control" id="password" required [ngModelOptions]="{standalone: true}" />
       </div>
       <button class="btn" type="button" class="btn btn-success" (click)="submit()">LOGIN</button>
+      <p *ngIf="error">Check your name and password!</p>
     </form>
   </div>
 </div>

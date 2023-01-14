@@ -36,3 +36,20 @@
     [responsive]="true"
   ></pagination-controls>
 </div>
+
+<div class="modal-back" *ngIf="modal" (click)="closeMovie()"> </div>
+<div class="modal" *ngIf="modal">
+  <span class="movie-card-modal">
+    <img
+      src="https://ui-avatars.com/api/?rounded=true&name={{
+        currmovie.title
+      }}"
+      alt=""
+    />
+    <p>{{ currmovie.title }}</p>
+    <p>{{ currmovie?.genres }}</p>
+    <p>{{ currmovie.description }}</p>
+  </span>
+
+
+</div>

@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class FilmListComponent implements OnInit {
   movies: any;
   cmovies: any;
+  modal:any = false;
+  currmovie:any;
   pages: number = 1;
   pageno: any[] = [];
   currpage: any = 1;
@@ -37,6 +39,14 @@ export class FilmListComponent implements OnInit {
   openMovie(e:any)
   {
     console.log(e);
+    this.currmovie = e;
+    this.modal = true;
+
+  }
+  closeMovie()
+  {
+    this.modal=false;
+    this.currmovie = null;
   }
 
   pageChanged(e: any) {

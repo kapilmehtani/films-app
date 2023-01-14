@@ -20,3 +20,40 @@
     display: flex;
     flex-wrap: wrap;
 }
+.modal{
+    right: 0;
+    background: white;
+    width: 50%;
+    top: 0;
+    height: 500px;
+    position: fixed;
+    height: 100%;
+}
+.modal-back{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    bottom: 0;
+
+}
+.movie-card-modal{
+    padding: 5px 10px;
+    margin: 20px;
+  //  width: 300px;
+    height: fit-content;
+    overflow: hidden;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 10px #ffe6cc;
+    border-radius: 10px;
+    // &:hover{
+    //     height: auto;
+    //     width: 320px;
+    //     //height: 270px;
+    //     transition: 0s;
+    // }
+}
